@@ -1,0 +1,86 @@
+﻿# Minimap API .Net6 gelen bir yeniliktir.
+Controller sınıflarını ve attribute-heavy yapılarını ortadan kaldırmıştır.
+Çok daha az kod yazarak REST API yazmaya olanak sağlar.
+.Net9 ile dahada olgunlaşmıştır.
+
+# 1- Temel Felsefe
+Amaç: Az kod, hızlı geliştirme, kolay okunabilirlik.
+Özellikler:
+- Controller yok.
+- [HttpGet] gibi attribute'ler yerine MapGet,MapPost gibi extesionlar var
+- Endpoint'ler doğrudan program.cs içine tanımlanır.
+- Lambda tabanlı, inline handler'lar.
+- Middleware ve filter'ler ile kolayca genişleştilebilir.
+
+# 2- Parametre Binding
+Minimal API otomatik olarak route, query ve body binging yapar.
+FormQuery, FormBody vs. kullabilir ama çoğu zaman otomatik olarak dönüşüm olur.
+Complex Object Binding: Json Body otomatik olarak deserialize edilir. Item örneği.
+
+# 3- Response ve Results API
+Results sınıfı ile HTTP response yönetilir. Results sınıfı .Net tarafında oluşturulmuştur.
+Response örnekleri:
+- Results.Ok() 
+- Results.Created() 
+- Results.NotFound() 
+- Results.BadRequest()
+- Results.UnAuthorized()
+
+# 4- Metadata ve Swagger / OpenApi
+Metadata ile Swwagger'a veya OpenAPI dökümanına açıklama verilebilir.
+WithName, WithSummary, WithDescription -> dökümantasyon amaçlı eklenebilir.
+Produces<T> extensionu swagger response tipini gösterir.
+
+# 5- Endpoint Filters
+Minimal API'da Attribute yerine Endpoint Filters kullanılır.
+Bir tür middlewardır.
+
+# 6- Grouping -> Endpoint gruplama
+Minimal API'de endpointleri mantıksal olarak gruplamak için MapGroup kullanılır.
+
+# 7- Middleware Kullanımı
+Minimal API tam olarak ASP.NET Core middleware mimarisi üzerine kuruludur.
+- Global middleware -> tüm endpointler için geçerli.
+- Endpoint filter -> sadece belirli endpointler için geçerli 
+
+# 8- Dependecy Injection
+Minimal API'de dependcy injection tam desteklenir.
+Parameter injection doğrudan lambda'ya yapılır.
+Scoped, Singleton, Transient hepsi desteklenir.
+
+# 9- Authenticaion ve Authorization
+[Authorize] attribute'u Minimal API'de lamba öncesi middleware olarak kullanılır.
+
+# 10- Versioning
+Minimal API'de MapGroup veya route prefix ile versioning uygulanabilir.
+Alternatif: NuGet paketleri ile resmi API versioning de kullanılabilir.
+
+# 11- Error Handling / Validation
+Minimal API'de global exception handling middleware yazılabilir.
+Model validation için custom Endpoint Filter veya extension method yazılabilir.
+
+# 12- Custom Extension il Endpoint Genişletme
+
+# <> Minimal API Filter vs Extension Method Farkları <>
+
+- Endpoint Filter:
+-> Tanım: Endpoint çağrısının öncesinde veya sonran çalışan middleware benzeri katman.
+-> Amaç: Request/Response sürecinde müdahale etmek, Request pipeline müdahale eder. (ör: validation, loglama, auth)
+-> Çalışma Zamanı: Runtime sırasında, her request için çalışır. (her request'te)
+-> Kapsam: Genellikle tek bir enpoint veya grup için yazılır.
+-> Kullanım Alanı: iş mantığı, kodlama,loglama. (Validation, Logging, Authorization, Exception handling)
+
+- Custom Extension Method:
+-> Tanım: Endpoint tanımlama aşamasında RouteHandlerBuilder'a ek işlev kazandıran helper method.
+-> Amaç: Endpoint tanımını sadeleştirmek veya standartlaştırmak (ör: requiredApiKey())
+-> Çalışma Zamanı: Application build-time sırasında endpoint tanımlanırken çalışır. (Sadece endpoint tanımlanırken)
+-> Kapsam: Genellikle çoklu endpointler için yazılır.
+-> Kullanım Alanı: Kod okunabilirliği, tekrar kullanım, Custom DSL (Metadata ekleme, Swagger açıklama)
+
+
+ 
+
+
+
+
+ 
