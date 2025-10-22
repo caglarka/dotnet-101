@@ -485,11 +485,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\caglar\\calismalar\\.net 101\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
+      "projectUniqueName": "D:\\caglar\\calismalar\\dotnet-101\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
       "projectName": "MinimalApi",
-      "projectPath": "D:\\caglar\\calismalar\\.net 101\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
+      "projectPath": "D:\\caglar\\calismalar\\dotnet-101\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
       "packagesPath": "C:\\Users\\caglark\\.nuget\\packages\\",
-      "outputPath": "D:\\caglar\\calismalar\\.net 101\\MinimalApi\\MinimalApi\\obj\\",
+      "outputPath": "D:\\caglar\\calismalar\\dotnet-101\\MinimalApi\\MinimalApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
