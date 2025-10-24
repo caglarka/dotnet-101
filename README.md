@@ -1,7 +1,6 @@
 # 🧠 .NET 101
 
 Bu repo, **.NET platformunu derinlemesine öğrenmek** isteyen geliştiriciler için adım adım oluşturulmuş bir çalışma alanıdır.  
-Proje kapsamında; C#, Entity Framework Core, Minimal API.
 
 ---
 
@@ -12,6 +11,7 @@ Bu projenin amacı, sıfırdan başlayan veya .NET Core bilgisini pekiştirmek i
 **Kapsam:**
 - .NET SDK kurulumu ve proje yapısı
 - Minimal API kullanımı
+- In-Memory ve Distributed Caching
 
 ---
 
@@ -23,6 +23,8 @@ Bu projenin amacı, sıfırdan başlayan veya .NET Core bilgisini pekiştirmek i
 | C# 12 | Programlama dili |
 | Swagger / Swashbuckle | API dokümantasyonu |
 | Minimal API | Lightweight REST API yapısı |
+|In-Memory Cache|Local Cache|
+|Distributed Cache|Redis|
 
 ---
 
@@ -32,4 +34,5 @@ Bu projenin amacı, sıfırdan başlayan veya .NET Core bilgisini pekiştirmek i
 [.NET SDK](https://dotnet.microsoft.com/en-us/download)  
 Kurulumdan sonra terminalde sürümü kontrol et:
 ```bash
+docker run --name local-redis -p 1453:6379 -d redis
 dotnet run
