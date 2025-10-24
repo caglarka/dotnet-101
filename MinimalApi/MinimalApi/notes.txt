@@ -50,6 +50,7 @@ Scoped, Singleton, Transient hepsi desteklenir.
 
 # 9- Authenticaion ve Authorization
 [Authorize] attribute'u Minimal API'de lamba öncesi middleware olarak kullanılır.
+Bir çok attribute tanımlayabiliyoruz
 
 # 10- Versioning
 Minimal API'de MapGroup veya route prefix ile versioning uygulanabilir.
@@ -75,7 +76,7 @@ Model validation için custom Endpoint Filter veya extension method yazılabilir
 -> Amaç: Endpoint tanımını sadeleştirmek veya standartlaştırmak (ör: requiredApiKey())
 -> Çalışma Zamanı: Application build-time sırasında endpoint tanımlanırken çalışır. (Sadece endpoint tanımlanırken)
 -> Kapsam: Genellikle çoklu endpointler için yazılır.
--> Kullanım Alanı: Kod okunabilirliği, tekrar kullanım, Custom DSL (Metadata ekleme, Swagger açıklama)
+-> Kullanım Alanı: Kod okunabilirliği, tekrar kullanım, Custom DSL (Metadata ekleme, Swagger açıklama
 
 
  

@@ -1,0 +1,4 @@
+# In-Memory Cache Absolute & Sliding Expritaion
+- Absolute Time: Cache'de ki datanın ne kadar tutulacağına dait net ömür belirtilmesidir.
+- Sliding Time: Cache'lenmiş datanın memory'de belirtilen süre periyodu zarfında tutulmasını belirtir. Belirtilen süre 
+periyodunda içerisinde cach'e yapılan erişim datanın ömrünü uzatır. (login olursa cache ömrü uzar)

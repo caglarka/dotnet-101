@@ -1,0 +1,52 @@
+# Kazanımlar
+- Redis ilgili ihtiyacımız olabilecek, tüm mimarileri öğrenicez.
+- .Net CRUD ve Mimari yaklaşıma kadar irdelicez
+
+# Caching Nedir ? 
+- Verilerin veri tabanında değilde ön bellekte yönetmemize imkan sağlar.
+- Veri erişimini Hızlandırır.
+- Performans artışı sağlar.
+- Sunucu yükünü azaltır.
+
+# Ne Tarz Veriler Cache'lenir ?
+- Cache'lenecek veriler, sıklıkla ve hızlı şekilde erişilecek veriler olmalıdır. 
+	Ör: Konfigurasyon verileri, menu, yetkiler, çok sık veri tabanından çekilen veriler cache'lenir.
+- Cache'lenmeyecek veriler:
+	Güncellenen veriler
+	Kişisel veriler
+	Güvenlik açısından risk teşkil eden veriler
+	Özel veriler
+	Geçiçi veriler
+	
+# Yazılım açısından zararlı durumu
+- Bellek yükünü artırır.
+- Güncellik sorunu ortaya çıkarır.
+- Güvenlik Sorunu
+- Yasa Dışı Kullanım (sağlık, finansal, kimlik vb bilgiler)
+
+# Caching Yaklaşımları
+* In- Memory Caching:
+Veri uygulamanın çalıştığı bilgisayarın RAM'inde cache'leyen bir yaklaşımdır.
+
+* Distributed Caching:
+Verileri birdan fazla fiziksel makinada cache'leyen, verileri farklı noktalarda tutarak tek bir noktada
+saklamantan daha güvenli bir yaklaşımdır.
+
+- Redis:
+Bellekte veri yapılarını yüksek performanslı bir şekilde cache'lemek için kullanılan bir veri tabanıdır.
+Cache işlemlerinin yanında message broker olarak kullanılabilir. Yapısal olarak key-value veri modelinde çalışmaktadır ve NoSQL veritabanıdır.
+
+# Redis'i docker üzerinden ayağa kaldırma
+- Redis default portu: 6379
+
+- localden 1453 portundan dockerdaki 6379 portuna yönlendirir.
+1- docker run --name local-redis -p 1453:6379 -d redis (eğer docker container yoksa hub'tan pull alır container ayağa kaldırır)
+2- docker exec -it container_id redis-cli (docker containerin içine girer)
+3- ip:6379> ping -> pong dönerse redis ayaktadır.
+
+
+
+ 
+
+
+

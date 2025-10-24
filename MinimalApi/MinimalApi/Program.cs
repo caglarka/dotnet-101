@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using MinimalApi.Attributes;
 using MinimalApi.Extensions;
 using MinimalApi.Filters;
 using MinimalApi.Models;
@@ -74,7 +75,7 @@ userGroup.MapGet("/{id:int}", (int id, UserService userService) =>
 }).Produces<User>().Produces<User>(StatusCodes.Status404NotFound);
 
 // # Note 9
-app.MapGet("/ping", [Authorize]() => "pong")
+app.MapGet("/ping", [Authorize, CustomMy]() => "pong")
     .RequireAuthorization(); // Alternative to [Authorize] attribute
 
 // # Note 10
@@ -92,7 +93,6 @@ app.Map("/error", (HttpContext _) => Results.Problem("An error occurred"));
 
 app.MapGet("/secure", () => "Secret")
     .RequireApiKey("123"); // # Note 12
-
 
 
 app.Run();
