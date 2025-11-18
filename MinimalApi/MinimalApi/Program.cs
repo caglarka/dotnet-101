@@ -91,7 +91,7 @@ app.UseExceptionHandler("/error");
 
 app.Map("/error", (HttpContext _) => Results.Problem("An error occurred"));
 
-app.MapGet("/secure", () => "Secret")
+app.MapGet("/secure", () => "Secret")  
     .RequireApiKey("123"); // # Note 12
 
 

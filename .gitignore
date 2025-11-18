@@ -1,0 +1,14 @@
+﻿# Visual Studio Code
+.vscode
+
+# Rider
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+
+# Visual Studio
+.vs/
+.idea/

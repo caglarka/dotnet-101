@@ -69,3 +69,4 @@ D:\caglar\calismalar\dotnet-101\MinimalApi\MinimalApi\obj\Debug\net9.0\refint\Mi
 D:\caglar\calismalar\dotnet-101\MinimalApi\MinimalApi\obj\Debug\net9.0\MinimalApi.pdb
 D:\caglar\calismalar\dotnet-101\MinimalApi\MinimalApi\obj\Debug\net9.0\MinimalApi.genruntimeconfig.cache
 D:\caglar\calismalar\dotnet-101\MinimalApi\MinimalApi\obj\Debug\net9.0\ref\MinimalApi.dll
+D:\caglar\calismalar\dotnet-101\MinimalApi\MinimalApi\obj\Debug\net9.0\swae.build.ex.cache

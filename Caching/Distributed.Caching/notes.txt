@@ -1,4 +1,4 @@
-# Kazanımlar
+f# Kazanımlar
 - Redis ilgili ihtiyacımız olabilecek, tüm mimarileri öğrenicez.
 - .Net CRUD ve Mimari yaklaşıma kadar irdelicez
 

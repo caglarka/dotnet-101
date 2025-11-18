@@ -68,7 +68,7 @@ app.MapGet("/cache/{key}", async (string key, IDistributedCachingService distrib
 
     if (value is null)
     {
-        return Results.NotFound();
+        return Results.NotFound("cache not found.");
     }
 
     return Results.Ok(value);
