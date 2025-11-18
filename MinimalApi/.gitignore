@@ -37,4 +37,3 @@ msbuild.wrn
 
 # Visual Studio
 .vs/
-/src/WAlert.API/Logs
