@@ -1,0 +1,20 @@
+- Esneklik, verilerin düzenlenmesi ve yönetilmesi gibi kompleks işlemlere ihtiyaç duyulduğunda class kullanımı uygundur.
+- Veri bütünlüğü ve performans öncelikli ise record kullanımı daha doğrudur.
+
+
+# Class
+C# programlama dilinin temel taşıdır, her bir class bir nesneyi temsil eder ve bu nesneye ait özelliklerin methodlarını içermektedir.
+Class'lar kalıtım(inheritance), encapsulation(kapsülleme), çok biçimlilik(polymorphism) destekler
+
+# Record
+C#'a .Net 9.0 sürümü ile birlikte geçen bir özelliktir. C# programlama dilinde değiştirilemez özelliklere sahip nesneler oluşturmak için record kullanılır.
+Bu tür nesneler, immutable (değiştirilemez) özelliklere sahip olur ve özellik değerleri genellikle contructor içinde atanır.
+
+Özet:
+- Öncelikle salt okunur(read-only) özelliklere sahip basit ver, yapıları için record
+kullanımı tercih edilir.
+- Değiştirilebilir ve kalıtım ihtiyacı olan nesneler için class kullanılır.
+- Değer eşitliği ve içerik karşılaştırmak için record.
+- Kısa ve net veri gösterimi için record
+
+

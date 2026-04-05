@@ -1,0 +1,567 @@
+
+** 
+--- 06.04.2026 ---
+
+# 🚀 90 Günlük Plan (maaş artırmaya odaklı)
+
+## 🧠 GENEL KURAL
+
+* Her gün: **2–4 saat**
+* %70 kod, %30 öğrenme
+* Her hafta: deploy edilen bir şey olacak
+
+---
+
+# 📅 1. FAZ (Gün 1–30)
+
+## “Backend’i senior seviyeye kilitle”
+
+### 🎯 Hedef:
+
+Sen zaten backendçisin → ama burada fark yaratıyoruz:
+👉 **“ben API yazarım” → “ben scalable sistem kurarım”**
+
+---
+
+### Öğreneceğin konular:
+
+#### 🔹 .NET derinleşme
+
+# 🎯 Sana net görev
+
+İlk 7 gün:
+
+👉 Şunları bitir:
+
+1. async/await internals
+2. middleware pipeline
+3. DI lifetimes
+4. basic caching
+5. memory management (GC nasıl çalışır)
+6. thread pool
+
+# 🧠 .NET DEEP DIVE (FULL STACK BACKEND MASTERY)
+
+Bunu 6 katman gibi düşün:
+
+---
+
+# 1️⃣ CLR & RUNTIME (çok kritik – çoğu kişi bilmiyor)
+
+Burayı bilen adam fark yaratır.
+
+### 🔹 Garbage Collector (GC)
+
+* generations (0,1,2)
+* LOH (Large Object Heap)
+* GC modes (Workstation vs Server)
+* GC tuning
+
+👉 Öğrenmen gereken:
+
+* allocation nasıl azaltılır
+* boxing/unboxing maliyeti
+* memory leak nasıl olur (managed’da bile!)
+
+---
+
+### 🔹 JIT vs AOT
+
+* JIT compilation nasıl çalışır
+* tiered compilation
+* Native AOT nedir (.NET 7+)
+
+---
+
+### 🔹 Threading internals
+
+* Thread vs ThreadPool
+* Task scheduler nasıl çalışır
+* context switching
+
+---
+
+# 2️⃣ ASYNC / CONCURRENCY (EN KRİTİK ALAN 🔥)
+
+Senior ile mid farkı burada.
+
+### 🔹 async/await derin
+
+* state machine nasıl oluşur
+* ConfigureAwait(false) ne yapar
+* deadlock nasıl oluşur
+
+---
+
+### 🔹 Parallelism
+
+* Task.WhenAll vs Parallel.ForEach
+* CPU-bound vs IO-bound
+
+---
+
+### 🔹 Advanced concurrency
+
+* SemaphoreSlim
+* Channels (System.Threading.Channels)
+* producer-consumer pattern
+
+---
+
+### 🔹 Cancellation & timeout
+
+* CancellationToken best practices
+* timeout yönetimi
+
+---
+
+# 3️⃣ ASP.NET CORE INTERNALS
+
+Framework’ü kullanma → **anla**
+
+---
+
+### 🔹 Request pipeline
+
+* middleware sırası
+* short-circuiting
+* custom middleware yazma
+
+---
+
+### 🔹 Model binding & validation
+
+* nasıl çalışıyor
+* custom binder
+
+---
+
+### 🔹 Filters
+
+* action filter
+* exception filter
+
+---
+
+### 🔹 Minimal API vs MVC
+
+* farkları
+* performans etkisi
+
+---
+
+### 🔹 Dependency Injection (DI)
+
+* lifetimes (Transient / Scoped / Singleton)
+* memory leak riski (özellikle singleton içinde scoped kullanımı)
+* factory pattern
+
+---
+
+# 4️⃣ PERFORMANCE & OPTIMIZATION (🔥 seni uçurur)
+
+---
+
+### 🔹 Allocation azaltma
+
+* struct vs class
+* Span<T> / Memory<T>
+* pooling (ObjectPool)
+
+---
+
+### 🔹 Serialization
+
+* System.Text.Json vs Newtonsoft
+* custom converters
+
+---
+
+### 🔹 Benchmarking
+
+* BenchmarkDotNet kullan
+* gerçek ölçüm yap
+
+---
+
+### 🔹 Caching
+
+* in-memory cache
+* distributed cache (Redis)
+* cache invalidation (zor kısım!)
+
+---
+
+# 5️⃣ DATABASE MASTERY (EF CORE + SQL)
+
+---
+
+### 🔹 EF Core deep dive
+
+* tracking vs no-tracking
+* compiled queries
+* N+1 problemi
+* lazy vs eager loading
+
+---
+
+### 🔹 SQL bilgisi (çok önemli)
+
+* index nasıl çalışır
+* execution plan okuma
+* join optimizasyonu
+
+---
+
+### 🔹 Transaction yönetimi
+
+* isolation levels
+* deadlock senaryoları
+
+---
+
+### 🔹 Outbox pattern
+
+* event + db consistency
+
+---
+
+# 6️⃣ ARCHITECTURE & DESIGN
+
+---
+
+### 🔹 Clean Architecture (ama doğru şekilde)
+
+* overengineering yapmadan
+* domain separation
+
+---
+
+### 🔹 SOLID (gerçek hayatta)
+
+* özellikle SRP & DIP
+
+---
+
+### 🔹 Patterns
+
+* repository (ne zaman kullanma!)
+* mediator (örn: MediatR)
+* CQRS
+
+---
+
+### 🔹 System Design basics
+
+* scaling
+* stateless vs stateful
+* load balancing
+
+---
+
+# 7️⃣ LOGGING, MONITORING, OBSERVABILITY
+
+Senior’ın olmazsa olmazı.
+
+---
+
+### 🔹 Logging
+
+* structured logging (Serilog)
+* correlation id
+
+---
+
+### 🔹 Monitoring
+
+* metrics (Prometheus)
+* health checks
+
+---
+
+### 🔹 Tracing
+
+* distributed tracing (OpenTelemetry)
+
+---
+
+# 8️⃣ SECURITY (çok undervalued ⚠️)
+
+---
+
+### 🔹 Authentication
+
+* JWT internals
+* refresh token
+
+---
+
+### 🔹 Authorization
+
+* policy-based auth
+
+---
+
+### 🔹 Web security
+
+* XSS
+* CSRF
+* rate limiting
+
+---
+
+# 9️⃣ DEVOPS & PRODUCTION
+
+---
+
+### 🔹 Docker
+
+* multi-stage build
+* image optimization
+
+---
+
+### 🔹 CI/CD
+
+* basic pipeline mantığı
+
+---
+
+### 🔹 Config yönetimi
+
+* secrets
+* environment-based config
+
+---
+
+# 🔟 BONUS (STAFF LEVEL)
+
+---
+
+### 🔹 Distributed systems
+
+* eventual consistency
+* idempotency
+
+---
+
+### 🔹 Messaging
+
+* RabbitMQ / Kafka
+
+---
+
+### 🔹 Resilience
+
+* retry
+* circuit breaker (Polly)
+
+---
+
+# ⚡ Nasıl çalışacaksın?
+
+Bu çok önemli:
+
+## ❌ yanlış:
+
+* “video izledim öğrendim”
+
+## ✅ doğru:
+
+* her konu → mini proje / test yaz
+
+---
+
+
+#### 🔹 Database
+
+* query optimization
+* indexing stratejileri
+* transaction vs eventual consistency
+
+#### 🔹 System design basics
+
+* caching (Redis)
+* rate limiting
+* logging (structured logging)
+
+---
+
+### 💻 Proje 1 (çok önemli)
+
+**“Production-ready API”**
+
+Ama klasik değil:
+
+👉 Özellikler:
+
+* JWT auth
+* rate limiting
+* caching (Redis)
+* logging (Serilog)
+* pagination + filtering
+* Docker
+
+👉 Bonus:
+
+* load test yap
+
+---
+
+# 📅 2. FAZ (Gün 31–60)
+
+## “AI entegrasyonu (fark burada başlıyor)”
+
+---
+
+### 🎯 Hedef:
+
+AI kullanabilen developer değil
+👉 **AI’yı ürüne çeviren developer**
+
+---
+
+### Öğreneceğin şeyler:
+
+#### 🔹 Core AI stack
+
+* embeddings nedir
+* vector database (Pinecone / Weaviate / pgvector)
+* RAG (ama sadece basic değil)
+
+#### 🔹 LLM kullanımı
+
+* prompt engineering (ama yüzeysel değil)
+* token / cost mantığı
+* streaming responses
+
+---
+
+### 💻 Proje 2 (CV’yi uçurur)
+
+**“AI Knowledge Service (SaaS gibi)”**
+
+👉 Özellikler:
+
+* kullanıcı doküman yükler
+* sistem embedding çıkarır
+* soru sorar → cevap döner
+
+AMA fark burada:
+
+👉 Sen şunları da yapacaksın:
+
+* multi-tenant yapı
+* caching (aynı soruya tekrar ücret ödeme)
+* rate limit
+* prompt versioning
+* basic analytics (kaç token harcandı)
+
+---
+
+# 📅 3. FAZ (Gün 61–90)
+
+## “Senior + fark yaratan seviye”
+
+---
+
+### 🎯 Hedef:
+
+Senior değil → **“hire edilmesi kolay adam”**
+
+---
+
+### Öğreneceğin şeyler:
+
+#### 🔹 Advanced backend
+
+* event-driven architecture
+* message queue (Kafka / RabbitMQ)
+* background jobs
+
+#### 🔹 System design
+
+* scalability
+* horizontal vs vertical scaling
+* bottleneck analizi
+
+---
+
+### 💻 Proje 3 (killer proje)
+
+**“AI destekli event-driven system”**
+
+Örnek:
+
+* user action → queue → worker → AI processing → result
+
+👉 Stack:
+
+* .NET API
+* message broker
+* AI service
+* worker service
+
+---
+
+# 🧩 Bu planın sonucu
+
+90 gün sonunda:
+
+### CV’de şunlar olacak:
+
+* production-grade API ✅
+* AI SaaS projesi ✅
+* distributed system ✅
+
+---
+
+### Bu seni nereye getirir?
+
+👉 Remote job (EU/US)
+👉 Maaş: **3k–8k$ bandı realistic**
+
+---
+
+# ❌ Yasaklar (çok önemli)
+
+90 gün boyunca:
+
+* Go ❌
+* Rust ❌
+* Unity ❌
+* random tutorial ❌
+* “şunu da öğreneyim” ❌
+
+---
+
+# ⚡ Günlük rutin (kopyala uygula)
+
+* 1 saat → öğrenme
+* 2–3 saat → kod
+* 30 dk → refactor / cleanup
+
+---
+
+# 🧠 Mental hack
+
+Şunu unutma:
+
+> Sen zaten iyisin
+> 👉 sadece “dağınık iyi”sin
+
+Biz seni:
+
+> 👉 “odaklı ve pahalı iyi” yapıyoruz
+
+---
+
+İstersen bir sonraki adımda:
+
+* Sana **direkt başlayacağın proje repo yapısını**
+* Hangi teknolojiyi tam olarak kullanacağını (.NET + hangi lib vs.)
+* Gün gün ilk hafta planını
+
+çıkarayım.
+
+Hazır mısın?
