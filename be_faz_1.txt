@@ -1,0 +1,278 @@
+# Staff .NET Yol Haritası
+
+## Summary
+
+Amaç: feature öğrenen geliştiriciden üretim sistemleri tasarlayan ve yön veren geliştiriciye çıkmak.
+
+Önerilen ilerleme:
+1. Temeli sağlamlaştır
+2. Gerçek backend akışlarını kur
+3. Operasyonel ve dağıtık sistem konularına geç
+4. Mimari karar verme ve teknik liderlik kasını geliştir
+
+Başarı kriteri:
+- Her konuyu sadece okuyup geçmemek
+- Her başlık için küçük ama çalışan bir proje çıkarmak
+- Her projede test, logging ve production concern eklemek
+
+## Roadmap
+
+### 1. Baslangic Seviyesi
+
+Hedef: .NET web uygulamasının temel yapı taşlarını refleks haline getirmek.
+
+Başlamadan önce derin temeller
+
+### 🔹 Dil & Temel Yapılar
+
+* async / await (derin)
+* Exception handling (doğru kullanım)
+* Generics (temel + constraints)
+* Nullable reference types
+
+### 🔹 Collections & LINQ
+
+* IEnumerable vs IQueryable
+* Deferred execution
+* LINQ optimizasyonu
+
+### 🔹 OOP & Clean Code
+
+* SOLID (özellikle SRP, DIP)
+* Interface vs abstraction
+* Composition vs inheritance
+* Immutability (özellikle records ile)
+
+### 🔹 Delegates & Functional Basics
+
+* Func / Action
+* Lambda expressions
+* Extension methods
+
+---
+
+## 🥈 Tier 2 — ÇOK ÖNEMLİ (Mid → Senior geçiş)
+
+> Seni diğerlerinden ayıran kısım burası.
+
+### 🔹 Concurrency & Async Internals
+
+* Task vs Thread
+* ThreadPool
+* ConfigureAwait
+* Race condition
+* lock / SemaphoreSlim
+
+### 🔹 Performance Awareness
+
+* Garbage Collection (temel mantık)
+* IDisposable & using
+* Boxing / Unboxing
+
+### 🔹 Advanced Generics
+
+* Generic constraints
+* Covariance / Contravariance
+
+### 🔹 Exception Design
+
+* Custom exception
+* Exception vs Result pattern
+
+### 🔹 Collections Deep Dive
+
+* Dictionary vs List vs HashSet
+* Big-O basics
+* Concurrent collections
+
+---
+
+## 🥉 Tier 3 — İYİ BİL (Senior polish)
+
+> Senior seviyede “bu adam biliyor” dedirten şeyler.
+
+### 🔹 Language Deep Features
+
+* Pattern matching (advanced)
+* records vs struct vs class farkları
+* init-only properties
+
+### 🔹 Reflection & Attributes
+
+* Reflection kullanımı
+* Custom attribute yazma
+
+### 🔹 Parallel Programming
+
+* Parallel.For
+* PLINQ
+
+### 🔹 Testability
+
+* Pure functions
+* Side-effect kontrolü
+
+---
+
+## 🧪 Tier 4 — NICE TO HAVE (Niş ama güçlü)
+
+> Her gün lazım değil ama doğru yerde çok fark yaratır.
+
+### 🔹 High Performance
+
+* Span<T> / Memory<T>
+* Object pooling
+
+### 🔹 Low-level Control
+
+* ref / in / out advanced kullanım
+* readonly struct
+
+### 🔹 Runtime & Advanced Internals
+
+* Finalizer vs Dispose farkı
+* GC tuning (çok derin)
+
+
+Konular:
+- ASP.NET Core temeli: request pipeline, DI, configuration, middleware
+- Minimal API
+- REST prensipleri: status code, DTO, pagination, filtering
+- Caching: in-memory, distributed, Redis
+- Options pattern
+- Swagger / OpenAPI
+- Logging temeli
+- Global exception handling
+- Validation
+
+Proje fikirleri:
+- Product Catalog API
+- Todo API with Redis cache
+- Weather API with external service integration
+
+Bu seviyede her projede mutlaka olsun:
+- CRUD endpointleri
+- request/response DTO
+- validation
+- global error handling
+- basic logging
+- basit unit test
+
+### 2. Orta Seviye
+
+Hedef: gerçek iş uygulaması geliştirebilecek seviyeye gelmek.
+
+Konular:
+- EF Core: migrations, relationships, transactions, query optimization
+- Authentication / Authorization: JWT, refresh token, roles, policies
+- Integration testing
+- Repository gerekliliği ve gereksizliği
+- BackgroundService / IHostedService
+- File upload/download
+- Health checks
+- Rate limiting
+- API versioning
+- Docker
+
+Proje fikirleri:
+- E-Commerce API
+- Blog API with auth
+- Inventory Management API
+
+Bu seviyede her projede mutlaka olsun:
+- SQL veritabanı
+- auth
+- integration test
+- docker setup
+- health check
+- structured logging
+
+### 3. Ileri Seviye
+
+Hedef: ölçeklenebilir ve dayanıklı sistemler kurabilmek.
+
+Konular:
+- Clean Architecture ve ne zaman fazla karmaşık olduğu
+- Vertical Slice Architecture
+- CQRS
+- MediatR benzeri araçlar
+- Message broker: RabbitMQ veya Kafka
+- Outbox pattern
+- Retry / circuit breaker / timeout: Polly
+- Idempotency
+- Distributed tracing
+- OpenTelemetry
+- Concurrency control
+- Performance tuning
+
+Proje fikirleri:
+- Order Management System
+- Payment + Notification workflow
+- Reservation system with concurrency control
+
+Bu seviyede her projede mutlaka olsun:
+- async communication
+- eventual consistency düşüncesi
+- tracing
+- resilience policy
+- failure senaryoları
+- load altında davranış gözlemi
+
+### 4. Staff Seviyesi Odaklari
+
+Hedef: sadece kod yazan değil, doğru sistemi ve doğru trade-off’u seçen mühendis olmak.
+
+Konular:
+- Monolith vs microservice kararları
+- Build vs buy kararları
+- Domain modeling
+- Bounded context
+- Observability strategy
+- Security by design
+- Cost/performance trade-off
+- Backward compatibility
+- Technical roadmap oluşturma
+- Code review ve engineering standards
+- Mentoring ve bilgi yayma
+- Incident analysis / postmortem yaklaşımı
+
+Bu aşamada çalışılacak pratikler:
+- bir sistemi ADR ile tasarlamak
+- production readiness checklist hazırlamak
+- bir PR template ve coding guideline yazmak
+- bottleneck analizi yapmak
+- bir sistemi sadeleştirme refactor’ü planlamak
+
+## Uygulama Sırası
+
+Senin repo için en mantıklı sıra bu:
+
+1. EF Core + PostgreSQL veya SQL Server
+2. Validation + Global Exception Handling + ProblemDetails
+3. JWT Authentication + Authorization
+4. Unit Test + Integration Test
+5. BackgroundService
+6. Serilog + OpenTelemetry
+7. Docker + Health Checks
+8. Rate Limiting + Polly
+9. RabbitMQ
+10. Outbox + Idempotency
+11. CQRS / Vertical Slice
+12. Performance + Profiling
+
+## Test Plan
+
+Her konu bittiğinde kendine şu kontrolü uygula:
+- Bu konuyu sıfırdan küçük bir projede kurabiliyor muyum?
+- Neden bunu kullandığımı açıklayabiliyor muyum?
+- Ne zaman kullanmamam gerektiğini söyleyebiliyor muyum?
+- Failure case’leri biliyor muyum?
+- Testini yazabiliyor muyum?
+- Production’da nasıl izleyeceğimi biliyor muyum?
+
+## Assumptions
+
+- Mevcut odak backend ve ASP.NET Core
+- Hedef sadece iş bulacak seviyeye gelmek değil, teknik yön verecek seviyeye çıkmak
+- Öğrenme yöntemi olarak konu + mini proje yaklaşımı kullanılacak
+- İlk aşamada tek repo içinde çoklu örnek proje yapısı devam edecek
